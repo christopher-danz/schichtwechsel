@@ -45,6 +45,7 @@ def _hours_ago(iso: str) -> int:
 class VitalTrendDetector:
     def detect(self, card: HandoverCard, patient: Patient) -> list[Inconsistency]:
         result: list[Inconsistency] = []
+        reported: set[str] = set()  # dedup by parameter
         latest = _latest_per_param(patient.recent_vitals)
         transcript_lower = card.raw_transcript.lower()
 
@@ -53,6 +54,7 @@ class VitalTrendDetector:
             temp = latest.get("temperature")
             if temp and temp.value > _THRESHOLDS["temperature"]["fever_above"]:
                 h = _hours_ago(temp.recorded_at)
+                reported.add("temperature")
                 result.append(
                     Inconsistency(
                         type="VITAL_TREND",
@@ -77,6 +79,7 @@ class VitalTrendDetector:
             spo2 = latest.get("oxygen_saturation")
             if spo2 and spo2.value < _THRESHOLDS["oxygen_saturation"]["low_below"]:
                 h = _hours_ago(spo2.recorded_at)
+                reported.add("oxygen_saturation")
                 result.append(
                     Inconsistency(
                         type="VITAL_TREND",
@@ -95,8 +98,10 @@ class VitalTrendDetector:
                     )
                 )
 
-        # Also check VitalMentions from SBAR for stable/improving qualifiers
+        # Also check VitalMentions from SBAR (skip parameters already reported above)
         for mention in card.sbar.assessment.vital_mentions:
+            if mention.parameter in reported:
+                continue
             if mention.qualifier not in ("stable", "improving", "unchanged"):
                 continue
             threshold = _THRESHOLDS.get(mention.parameter, {})
@@ -105,6 +110,7 @@ class VitalTrendDetector:
                 continue
             if "fever_above" in threshold and reading.value > threshold["fever_above"]:
                 h = _hours_ago(reading.recorded_at)
+                reported.add(mention.parameter)
                 result.append(
                     Inconsistency(
                         type="VITAL_TREND",

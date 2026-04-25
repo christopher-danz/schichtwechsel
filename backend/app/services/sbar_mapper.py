@@ -33,7 +33,6 @@ _VITAL_KEYWORDS: dict[str, str] = {
 
 _QUALIFIER_MAP: dict[str, str] = {
     "stabil": "stable",
-    "gut": "stable",
     "normal": "stable",
     "besser": "improving",
     "verbessert": "improving",
