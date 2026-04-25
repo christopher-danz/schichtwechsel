@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { fetchPatients, fetchPatient } from "./api/patients";
 import PatientList from "./components/PatientList";
 import PatientDetail from "./components/PatientDetail";
+import RecordingSection from "./components/RecordingSection";
 import type { Patient, PatientSummary } from "./types";
 
 export default function App() {
@@ -10,6 +11,7 @@ export default function App() {
   const [selectedPatient, setSelectedPatient] = useState<Patient | null>(null);
   const [loadingList, setLoadingList] = useState(true);
   const [loadingDetail, setLoadingDetail] = useState(false);
+  const [transcript, setTranscript] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -24,6 +26,7 @@ export default function App() {
   function handleSelectPatient(id: string) {
     setSelectedId(id);
     setSelectedPatient(null);
+    setTranscript(null);
     setLoadingDetail(true);
     fetchPatient(id)
       .then(setSelectedPatient)
@@ -96,7 +99,20 @@ export default function App() {
             )}
             {selectedPatient && (
               <PatientDetail patient={selectedPatient}>
-                {/* RecordingSection injected here in Phase C */}
+                <RecordingSection
+                  patientId={selectedPatient.patient_id}
+                  onTranscript={setTranscript}
+                />
+                {transcript && (
+                  <section className="border-t border-slate-100 pt-4">
+                    <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">
+                      Transkript
+                    </h3>
+                    <p className="text-sm text-slate-700 leading-relaxed whitespace-pre-wrap">
+                      {transcript}
+                    </p>
+                  </section>
+                )}
               </PatientDetail>
             )}
           </section>
