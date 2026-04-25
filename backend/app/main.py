@@ -4,7 +4,9 @@ from typing import AsyncIterator
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api.routes import health, patients, transcribe
+from app.api.routes import health, patients, transcribe, structure
+from app.services.card_store import CardStore
+from app.services.gliner_service import GLiNERService
 from app.services.patient_source import PatientSource
 from app.services.transcription import TranscriptionService
 
@@ -13,7 +15,8 @@ from app.services.transcription import TranscriptionService
 async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     app.state.patient_source = PatientSource()
     app.state.transcription_service = TranscriptionService()
-    # app.state.card_store will be added in Phase D
+    app.state.gliner_service = GLiNERService()
+    app.state.card_store = CardStore()
     yield
 
 
@@ -29,3 +32,4 @@ app.add_middleware(
 app.include_router(health.router, prefix="/api")
 app.include_router(patients.router, prefix="/api")
 app.include_router(transcribe.router, prefix="/api")
+app.include_router(structure.router, prefix="/api")

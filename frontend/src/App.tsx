@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { fetchPatients, fetchPatient } from "./api/patients";
+import { postStructure } from "./api/structure";
 import PatientList from "./components/PatientList";
 import PatientDetail from "./components/PatientDetail";
 import RecordingSection from "./components/RecordingSection";
-import type { Patient, PatientSummary } from "./types";
+import SBARCard from "./components/SBARCard";
+import type { Patient, PatientSummary, StructureResponse } from "./types";
 
 export default function App() {
   const [patients, setPatients] = useState<PatientSummary[]>([]);
@@ -12,6 +14,8 @@ export default function App() {
   const [loadingList, setLoadingList] = useState(true);
   const [loadingDetail, setLoadingDetail] = useState(false);
   const [transcript, setTranscript] = useState<string | null>(null);
+  const [structuring, setStructuring] = useState(false);
+  const [sbarData, setSbarData] = useState<StructureResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -27,6 +31,7 @@ export default function App() {
     setSelectedId(id);
     setSelectedPatient(null);
     setTranscript(null);
+    setSbarData(null);
     setLoadingDetail(true);
     fetchPatient(id)
       .then(setSelectedPatient)
@@ -34,6 +39,25 @@ export default function App() {
         setError(err instanceof Error ? err.message : "Patient konnte nicht geladen werden")
       )
       .finally(() => setLoadingDetail(false));
+  }
+
+  function handleTranscript(t: string) {
+    setTranscript(t);
+    setSbarData(null);
+  }
+
+  async function handleStructure() {
+    if (!transcript || !selectedId) return;
+    setStructuring(true);
+    setError(null);
+    try {
+      const data = await postStructure(transcript, selectedId);
+      setSbarData(data);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Strukturierung fehlgeschlagen");
+    } finally {
+      setStructuring(false);
+    }
   }
 
   const today = new Date().toLocaleDateString("de-DE", {
@@ -101,18 +125,39 @@ export default function App() {
               <PatientDetail patient={selectedPatient}>
                 <RecordingSection
                   patientId={selectedPatient.patient_id}
-                  onTranscript={setTranscript}
+                  onTranscript={handleTranscript}
                 />
+
+                {/* Transcript + structure button */}
                 {transcript && (
-                  <section className="border-t border-slate-100 pt-4">
-                    <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">
+                  <section className="border-t border-slate-100 pt-4 space-y-3">
+                    <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-400">
                       Transkript
                     </h3>
                     <p className="text-sm text-slate-700 leading-relaxed whitespace-pre-wrap">
                       {transcript}
                     </p>
+                    {!sbarData && (
+                      <button
+                        onClick={() => void handleStructure()}
+                        disabled={structuring}
+                        className="flex items-center gap-2 bg-blue-700 hover:bg-blue-800 disabled:opacity-50 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
+                      >
+                        {structuring ? (
+                          <>
+                            <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                            SBAR wird erstellt…
+                          </>
+                        ) : (
+                          "SBAR erstellen"
+                        )}
+                      </button>
+                    )}
                   </section>
                 )}
+
+                {/* SBAR card */}
+                {sbarData && <SBARCard data={sbarData} />}
               </PatientDetail>
             )}
           </section>
