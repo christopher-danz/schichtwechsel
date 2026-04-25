@@ -1,0 +1,910 @@
+{
+  "patient_id": "synth-002",
+  "bed": "2",
+  "demographics": {
+    "age": 54,
+    "sex": "M",
+    "name": "Herr Weber"
+  },
+  "main_diagnosis": "Postoperativ nach laparoskopischer Cholezystektomie (Tag 1)",
+  "allergies": [],
+  "medications": [
+    {
+      "name": "Metamizol",
+      "dose": "1000 mg",
+      "frequency": "4× täglich",
+      "route": "intravenös",
+      "status": "active",
+      "started_at": "2026-04-25"
+    },
+    {
+      "name": "Enoxaparin",
+      "dose": "40 mg",
+      "frequency": "1× täglich",
+      "route": "subkutan",
+      "status": "active",
+      "started_at": "2026-04-25"
+    },
+    {
+      "name": "Pantoprazol",
+      "dose": "40 mg",
+      "frequency": "1× täglich",
+      "route": "oral",
+      "status": "active",
+      "started_at": "2026-04-25"
+    }
+  ],
+  "recent_vitals": [
+    {
+      "parameter": "temperature",
+      "value": 37.2,
+      "unit": "°C",
+      "recorded_at": "2026-04-24T14:30:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.2,
+      "unit": "°C",
+      "recorded_at": "2026-04-24T15:00:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.2,
+      "unit": "°C",
+      "recorded_at": "2026-04-24T15:30:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.1,
+      "unit": "°C",
+      "recorded_at": "2026-04-24T16:00:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.2,
+      "unit": "°C",
+      "recorded_at": "2026-04-24T16:30:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.2,
+      "unit": "°C",
+      "recorded_at": "2026-04-24T17:00:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.3,
+      "unit": "°C",
+      "recorded_at": "2026-04-24T17:30:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.1,
+      "unit": "°C",
+      "recorded_at": "2026-04-24T18:00:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.2,
+      "unit": "°C",
+      "recorded_at": "2026-04-24T18:30:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.0,
+      "unit": "°C",
+      "recorded_at": "2026-04-24T19:00:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.1,
+      "unit": "°C",
+      "recorded_at": "2026-04-24T19:30:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.1,
+      "unit": "°C",
+      "recorded_at": "2026-04-24T20:00:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.2,
+      "unit": "°C",
+      "recorded_at": "2026-04-24T20:30:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.2,
+      "unit": "°C",
+      "recorded_at": "2026-04-24T21:00:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.1,
+      "unit": "°C",
+      "recorded_at": "2026-04-24T21:30:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.0,
+      "unit": "°C",
+      "recorded_at": "2026-04-24T22:00:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.1,
+      "unit": "°C",
+      "recorded_at": "2026-04-24T22:30:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.1,
+      "unit": "°C",
+      "recorded_at": "2026-04-24T23:00:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.1,
+      "unit": "°C",
+      "recorded_at": "2026-04-24T23:30:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.0,
+      "unit": "°C",
+      "recorded_at": "2026-04-25T00:00:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.1,
+      "unit": "°C",
+      "recorded_at": "2026-04-25T00:30:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.1,
+      "unit": "°C",
+      "recorded_at": "2026-04-25T01:00:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.1,
+      "unit": "°C",
+      "recorded_at": "2026-04-25T01:30:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.1,
+      "unit": "°C",
+      "recorded_at": "2026-04-25T02:00:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.1,
+      "unit": "°C",
+      "recorded_at": "2026-04-25T02:30:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.1,
+      "unit": "°C",
+      "recorded_at": "2026-04-25T03:00:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.2,
+      "unit": "°C",
+      "recorded_at": "2026-04-25T03:30:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.0,
+      "unit": "°C",
+      "recorded_at": "2026-04-25T04:00:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.0,
+      "unit": "°C",
+      "recorded_at": "2026-04-25T04:30:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.0,
+      "unit": "°C",
+      "recorded_at": "2026-04-25T05:00:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.1,
+      "unit": "°C",
+      "recorded_at": "2026-04-25T05:30:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.0,
+      "unit": "°C",
+      "recorded_at": "2026-04-25T06:00:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.0,
+      "unit": "°C",
+      "recorded_at": "2026-04-25T06:30:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.1,
+      "unit": "°C",
+      "recorded_at": "2026-04-25T07:00:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.0,
+      "unit": "°C",
+      "recorded_at": "2026-04-25T07:30:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 36.9,
+      "unit": "°C",
+      "recorded_at": "2026-04-25T08:00:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.0,
+      "unit": "°C",
+      "recorded_at": "2026-04-25T08:30:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.0,
+      "unit": "°C",
+      "recorded_at": "2026-04-25T09:00:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 36.9,
+      "unit": "°C",
+      "recorded_at": "2026-04-25T09:30:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.0,
+      "unit": "°C",
+      "recorded_at": "2026-04-25T10:00:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.0,
+      "unit": "°C",
+      "recorded_at": "2026-04-25T10:30:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 36.9,
+      "unit": "°C",
+      "recorded_at": "2026-04-25T11:00:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 37.0,
+      "unit": "°C",
+      "recorded_at": "2026-04-25T11:30:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 36.9,
+      "unit": "°C",
+      "recorded_at": "2026-04-25T12:00:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 36.8,
+      "unit": "°C",
+      "recorded_at": "2026-04-25T12:30:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 36.9,
+      "unit": "°C",
+      "recorded_at": "2026-04-25T13:00:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 36.9,
+      "unit": "°C",
+      "recorded_at": "2026-04-25T13:30:00"
+    },
+    {
+      "parameter": "temperature",
+      "value": 36.9,
+      "unit": "°C",
+      "recorded_at": "2026-04-25T14:00:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 97.2,
+      "unit": "%",
+      "recorded_at": "2026-04-24T14:30:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 97.2,
+      "unit": "%",
+      "recorded_at": "2026-04-24T15:00:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 96.9,
+      "unit": "%",
+      "recorded_at": "2026-04-24T15:30:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 97.2,
+      "unit": "%",
+      "recorded_at": "2026-04-24T16:00:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 97.4,
+      "unit": "%",
+      "recorded_at": "2026-04-24T16:30:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 96.9,
+      "unit": "%",
+      "recorded_at": "2026-04-24T17:00:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 97.3,
+      "unit": "%",
+      "recorded_at": "2026-04-24T17:30:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 97.2,
+      "unit": "%",
+      "recorded_at": "2026-04-24T18:00:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 97.9,
+      "unit": "%",
+      "recorded_at": "2026-04-24T18:30:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 96.7,
+      "unit": "%",
+      "recorded_at": "2026-04-24T19:00:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 97.5,
+      "unit": "%",
+      "recorded_at": "2026-04-24T19:30:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 97.3,
+      "unit": "%",
+      "recorded_at": "2026-04-24T20:00:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 97.4,
+      "unit": "%",
+      "recorded_at": "2026-04-24T20:30:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 98.0,
+      "unit": "%",
+      "recorded_at": "2026-04-24T21:00:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 97.4,
+      "unit": "%",
+      "recorded_at": "2026-04-24T21:30:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 98.2,
+      "unit": "%",
+      "recorded_at": "2026-04-24T22:00:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 97.4,
+      "unit": "%",
+      "recorded_at": "2026-04-24T22:30:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 97.6,
+      "unit": "%",
+      "recorded_at": "2026-04-24T23:00:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 97.4,
+      "unit": "%",
+      "recorded_at": "2026-04-24T23:30:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 97.4,
+      "unit": "%",
+      "recorded_at": "2026-04-25T00:00:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 97.7,
+      "unit": "%",
+      "recorded_at": "2026-04-25T00:30:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 97.6,
+      "unit": "%",
+      "recorded_at": "2026-04-25T01:00:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 97.8,
+      "unit": "%",
+      "recorded_at": "2026-04-25T01:30:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 97.1,
+      "unit": "%",
+      "recorded_at": "2026-04-25T02:00:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 98.4,
+      "unit": "%",
+      "recorded_at": "2026-04-25T02:30:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 97.7,
+      "unit": "%",
+      "recorded_at": "2026-04-25T03:00:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 98.4,
+      "unit": "%",
+      "recorded_at": "2026-04-25T03:30:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 97.6,
+      "unit": "%",
+      "recorded_at": "2026-04-25T04:00:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 98.0,
+      "unit": "%",
+      "recorded_at": "2026-04-25T04:30:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 98.9,
+      "unit": "%",
+      "recorded_at": "2026-04-25T05:00:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 97.7,
+      "unit": "%",
+      "recorded_at": "2026-04-25T05:30:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 97.5,
+      "unit": "%",
+      "recorded_at": "2026-04-25T06:00:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 97.9,
+      "unit": "%",
+      "recorded_at": "2026-04-25T06:30:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 98.2,
+      "unit": "%",
+      "recorded_at": "2026-04-25T07:00:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 98.3,
+      "unit": "%",
+      "recorded_at": "2026-04-25T07:30:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 98.5,
+      "unit": "%",
+      "recorded_at": "2026-04-25T08:00:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 98.1,
+      "unit": "%",
+      "recorded_at": "2026-04-25T08:30:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 97.7,
+      "unit": "%",
+      "recorded_at": "2026-04-25T09:00:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 98.1,
+      "unit": "%",
+      "recorded_at": "2026-04-25T09:30:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 98.6,
+      "unit": "%",
+      "recorded_at": "2026-04-25T10:00:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 98.4,
+      "unit": "%",
+      "recorded_at": "2026-04-25T10:30:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 97.7,
+      "unit": "%",
+      "recorded_at": "2026-04-25T11:00:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 98.3,
+      "unit": "%",
+      "recorded_at": "2026-04-25T11:30:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 98.8,
+      "unit": "%",
+      "recorded_at": "2026-04-25T12:00:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 99.0,
+      "unit": "%",
+      "recorded_at": "2026-04-25T12:30:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 98.6,
+      "unit": "%",
+      "recorded_at": "2026-04-25T13:00:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 98.6,
+      "unit": "%",
+      "recorded_at": "2026-04-25T13:30:00"
+    },
+    {
+      "parameter": "oxygen_saturation",
+      "value": 98.1,
+      "unit": "%",
+      "recorded_at": "2026-04-25T14:00:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 76.3,
+      "unit": "bpm",
+      "recorded_at": "2026-04-24T14:30:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 78.0,
+      "unit": "bpm",
+      "recorded_at": "2026-04-24T15:00:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 78.8,
+      "unit": "bpm",
+      "recorded_at": "2026-04-24T15:30:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 78.8,
+      "unit": "bpm",
+      "recorded_at": "2026-04-24T16:00:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 76.5,
+      "unit": "bpm",
+      "recorded_at": "2026-04-24T16:30:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 75.1,
+      "unit": "bpm",
+      "recorded_at": "2026-04-24T17:00:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 75.7,
+      "unit": "bpm",
+      "recorded_at": "2026-04-24T17:30:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 74.8,
+      "unit": "bpm",
+      "recorded_at": "2026-04-24T18:00:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 78.3,
+      "unit": "bpm",
+      "recorded_at": "2026-04-24T18:30:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 72.2,
+      "unit": "bpm",
+      "recorded_at": "2026-04-24T19:00:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 76.1,
+      "unit": "bpm",
+      "recorded_at": "2026-04-24T19:30:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 77.5,
+      "unit": "bpm",
+      "recorded_at": "2026-04-24T20:00:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 79.5,
+      "unit": "bpm",
+      "recorded_at": "2026-04-24T20:30:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 76.5,
+      "unit": "bpm",
+      "recorded_at": "2026-04-24T21:00:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 78.2,
+      "unit": "bpm",
+      "recorded_at": "2026-04-24T21:30:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 75.3,
+      "unit": "bpm",
+      "recorded_at": "2026-04-24T22:00:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 74.5,
+      "unit": "bpm",
+      "recorded_at": "2026-04-24T22:30:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 74.5,
+      "unit": "bpm",
+      "recorded_at": "2026-04-24T23:00:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 78.8,
+      "unit": "bpm",
+      "recorded_at": "2026-04-24T23:30:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 77.6,
+      "unit": "bpm",
+      "recorded_at": "2026-04-25T00:00:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 76.4,
+      "unit": "bpm",
+      "recorded_at": "2026-04-25T00:30:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 82.0,
+      "unit": "bpm",
+      "recorded_at": "2026-04-25T01:00:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 75.1,
+      "unit": "bpm",
+      "recorded_at": "2026-04-25T01:30:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 76.3,
+      "unit": "bpm",
+      "recorded_at": "2026-04-25T02:00:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 75.6,
+      "unit": "bpm",
+      "recorded_at": "2026-04-25T02:30:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 74.4,
+      "unit": "bpm",
+      "recorded_at": "2026-04-25T03:00:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 79.3,
+      "unit": "bpm",
+      "recorded_at": "2026-04-25T03:30:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 77.6,
+      "unit": "bpm",
+      "recorded_at": "2026-04-25T04:00:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 71.6,
+      "unit": "bpm",
+      "recorded_at": "2026-04-25T04:30:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 73.5,
+      "unit": "bpm",
+      "recorded_at": "2026-04-25T05:00:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 75.0,
+      "unit": "bpm",
+      "recorded_at": "2026-04-25T05:30:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 75.6,
+      "unit": "bpm",
+      "recorded_at": "2026-04-25T06:00:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 71.2,
+      "unit": "bpm",
+      "recorded_at": "2026-04-25T06:30:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 69.3,
+      "unit": "bpm",
+      "recorded_at": "2026-04-25T07:00:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 69.8,
+      "unit": "bpm",
+      "recorded_at": "2026-04-25T07:30:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 73.4,
+      "unit": "bpm",
+      "recorded_at": "2026-04-25T08:00:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 73.2,
+      "unit": "bpm",
+      "recorded_at": "2026-04-25T08:30:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 74.0,
+      "unit": "bpm",
+      "recorded_at": "2026-04-25T09:00:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 71.6,
+      "unit": "bpm",
+      "recorded_at": "2026-04-25T09:30:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 70.6,
+      "unit": "bpm",
+      "recorded_at": "2026-04-25T10:00:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 68.8,
+      "unit": "bpm",
+      "recorded_at": "2026-04-25T10:30:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 73.4,
+      "unit": "bpm",
+      "recorded_at": "2026-04-25T11:00:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 73.4,
+      "unit": "bpm",
+      "recorded_at": "2026-04-25T11:30:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 74.5,
+      "unit": "bpm",
+      "recorded_at": "2026-04-25T12:00:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 74.0,
+      "unit": "bpm",
+      "recorded_at": "2026-04-25T12:30:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 71.9,
+      "unit": "bpm",
+      "recorded_at": "2026-04-25T13:00:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 74.8,
+      "unit": "bpm",
+      "recorded_at": "2026-04-25T13:30:00"
+    },
+    {
+      "parameter": "heart_rate",
+      "value": 71.7,
+      "unit": "bpm",
+      "recorded_at": "2026-04-25T14:00:00"
+    }
+  ],
+  "open_diagnostics": [
+    {
+      "name": "Wundkontrolle",
+      "ordered_at": "2026-04-25T07:00:00",
+      "status": "pending"
+    }
+  ]
+}
