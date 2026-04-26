@@ -5,6 +5,7 @@ import type { ActionItem, SBARStructure } from "../types/sbar";
 
 interface Props {
   data: StructureResponse;
+  onSigned?: () => void;
 }
 
 const VITAL_LABELS: Record<string, string> = {
@@ -291,9 +292,10 @@ function CompletenessBar({ completeness, cardId, onConfirmed }: CompletenessBarP
 
 interface SignSectionProps {
   cardId: string;
+  onSigned?: () => void;
 }
 
-function SignSection({ cardId }: SignSectionProps) {
+function SignSection({ cardId, onSigned }: SignSectionProps) {
   const [signing, setSigning] = useState(false);
   const [signResult, setSignResult] = useState<SignResponse | null>(null);
   const [signError, setSignError] = useState<string | null>(null);
@@ -304,6 +306,7 @@ function SignSection({ cardId }: SignSectionProps) {
     try {
       const result = await postSign(cardId, "Dr. Müller");
       setSignResult(result);
+      onSigned?.();
     } catch (err) {
       setSignError(err instanceof Error ? err.message : "Fehler beim Signieren");
     } finally {
@@ -360,29 +363,25 @@ function SignSection({ cardId }: SignSectionProps) {
   );
 }
 
-export default function SBARCard({ data }: Props) {
+export default function SBARCard({ data, onSigned }: Props) {
   const [completeness, setCompleteness] = useState<CompletenessScore>(data.completeness);
 
   return (
     <div className="border-t border-slate-100 pt-4 space-y-4">
-      {/* Inconsistency warnings — eye-catching, shown first */}
       <InconsistencyBanner items={data.inconsistencies} />
 
-      {/* SBAR sections */}
       <SBARSituation sbar={data.sbar} />
       <SBARBackground sbar={data.sbar} />
       <SBARAssessment sbar={data.sbar} />
       <SBARRecommendation sbar={data.sbar} />
 
-      {/* Completeness with confirm button */}
       <CompletenessBar
         completeness={completeness}
         cardId={data.card_id}
         onConfirmed={setCompleteness}
       />
 
-      {/* Sign */}
-      <SignSection cardId={data.card_id} />
+      <SignSection cardId={data.card_id} onSigned={onSigned} />
     </div>
   );
 }
