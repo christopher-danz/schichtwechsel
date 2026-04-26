@@ -9,7 +9,7 @@ services:
     volumes:
       - ./backend/app:/app/app
       - ./backend/data:/app/data
-      - gliner_cache:/root/.cache/huggingface
+      - gliner_cache:/app/.hf_cache
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
       interval: 10s
